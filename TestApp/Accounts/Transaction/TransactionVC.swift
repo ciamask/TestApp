@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TransactionVC: BaseViewController {
+class TransactionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,8 +15,8 @@ class TransactionVC: BaseViewController {
     
     let currentView = TransactionView()
     
-    override func loadView() {
-        view = currentView
-    }
+//    override func loadView() {
+//        view = currentView
+//    }
  
 }

@@ -29,6 +29,7 @@
 		0390EA1926E127DA0098D363 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA1826E127DA0098D363 /* UITextField+Ext.swift */; };
 		0390EA1E26E12FCD0098D363 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA1D26E12FCD0098D363 /* HomeCell.swift */; };
 		0390EA2626E134960098D363 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA2526E134960098D363 /* HomeModel.swift */; };
+		0390EABA26E5C2020098D363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0390EAB926E5C2020098D363 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		0390EA1826E127DA0098D363 /* UITextField+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 		0390EA1D26E12FCD0098D363 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		0390EA2526E134960098D363 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		0390EAB926E5C2020098D363 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,9 +129,8 @@
 		0390E99826E11E470098D363 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				0390EA9326E212620098D363 /* Accounts */,
 				0390E9D726E11F000098D363 /* Uitils */,
-				0390E9D626E11EE50098D363 /* Transaction */,
-				0390E9D526E11ED80098D363 /* Home */,
 				0390E99926E11E470098D363 /* AppDelegate.swift */,
 				0390E99B26E11E470098D363 /* SceneDelegate.swift */,
 				0390E99D26E11E470098D363 /* ViewController.swift */,
@@ -208,6 +209,16 @@
 				0390E9E426E11F000098D363 /* UIAnchor+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0390EA9326E212620098D363 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				0390EAB926E5C2020098D363 /* Main.storyboard */,
+				0390E9D526E11ED80098D363 /* Home */,
+				0390E9D626E11EE50098D363 /* Transaction */,
+			);
+			path = Accounts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0390EABA26E5C2020098D363 /* Main.storyboard in Resources */,
 				0390E9A626E11E4A0098D363 /* LaunchScreen.storyboard in Resources */,
 				0390E9A326E11E4A0098D363 /* Assets.xcassets in Resources */,
 			);

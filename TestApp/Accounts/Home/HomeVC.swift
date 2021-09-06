@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeVC: BaseViewController {
+class HomeViewController: BaseViewController {
     
     let currentView = HomeView()
     let data = transactionData()
@@ -34,7 +34,7 @@ class HomeVC: BaseViewController {
     }
     
     @objc func handleAdd() {
-        let transactionVC = TransactionVC()
+        let transactionVC = TransactionViewController()
         navigationController?.pushViewController(transactionVC, animated: true)
     }
     
@@ -42,7 +42,7 @@ class HomeVC: BaseViewController {
 
 //MARK:- Table Delegate Block
 
-extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.getData().count
     }
