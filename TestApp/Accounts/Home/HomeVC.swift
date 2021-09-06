@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class HomeVC: BaseViewController {
     
     let currentView = HomeView()
     let data = transactionData()
@@ -42,7 +42,7 @@ class HomeViewController: BaseViewController {
 
 //MARK:- Table Delegate Block
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.getData().count
     }

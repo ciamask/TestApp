@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TransactionViewController: UIViewController {
+class TransactionVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
