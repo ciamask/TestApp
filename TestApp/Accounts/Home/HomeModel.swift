@@ -32,3 +32,7 @@ struct transactionData {
     }
     
 }
+
+struct BalanceModel : Codable {
+    let balance: Int?
+}
