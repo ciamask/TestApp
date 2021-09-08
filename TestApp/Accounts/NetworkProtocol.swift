@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol NetworkProtocol{
+protocol NetworkProtocol {
     func getBalance(onCompletion: @escaping (BalanceModel) -> ())
 }

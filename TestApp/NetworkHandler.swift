@@ -7,12 +7,11 @@
 
 import Foundation
 
-class NetworkHandler : NetworkProtocol {
+class NetworkHandler{
     
     func getBalance(onCompletion: @escaping (BalanceModel) -> ()) {
-        let url = URLComponents(string: (ApiConstants.baseUrl + ApiConstants.getBalance))!
-        print(url)
         
+        let url = URLComponents(string: (ApiConstants.baseUrl + ApiConstants.getBalance))!
         var request = URLRequest(url: url.url!)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
@@ -26,9 +25,14 @@ class NetworkHandler : NetworkProtocol {
             }
             do {
                 let decodedValue = try JSONDecoder().decode(BalanceModel.self, from: data)
-                onCompletion(decodedValue)
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    onCompletion(decodedValue)
+                }
             } catch let err {
                 print(err.localizedDescription)
+//                onCompletion()
+                return
             }
         }.resume()
     }

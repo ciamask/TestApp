@@ -171,6 +171,7 @@
 			children = (
 				0390EA9326E212620098D363 /* Accounts */,
 				0390E9D726E11F000098D363 /* Uitils */,
+				0390EAD426E5DBC50098D363 /* SupportFiles */,
 				0390E9A726E11E4A0098D363 /* Info.plist */,
 				03DEF02126E8A55B00E0C214 /* NetworkHandler.swift */,
 				03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */,
@@ -221,7 +222,6 @@
 		0390E9D726E11F000098D363 /* Uitils */ = {
 			isa = PBXGroup;
 			children = (
-				0390EAD426E5DBC50098D363 /* SupportFiles */,
 				0390E9D826E11F000098D363 /* CustomClasses */,
 				0390E9DE26E11F000098D363 /* Extensions */,
 			);
