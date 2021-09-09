@@ -36,3 +36,17 @@ struct transactionData {
 struct BalanceModel : Codable {
     let balance: Int?
 }
+
+struct BalanceData {
+    private var data = [BalanceModel]()
+    
+    init() {
+        data.append(BalanceModel(balance: 1000))
+    }
+    
+    func getData() -> [BalanceModel]{
+        return data
+    }
+    
+}
+

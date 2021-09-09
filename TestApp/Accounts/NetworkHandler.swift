@@ -7,6 +7,7 @@
 
 import Foundation
 
-protocol NetworkProtocol {
+protocol NetworkHandler {
     func getBalance(onCompletion: @escaping (BalanceModel) -> ())
+    // func tableData()
 }

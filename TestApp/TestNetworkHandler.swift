@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class TestNetworkHandler : NetworkHandler {
+    
+    func getBalance(onCompletion: @escaping (BalanceModel) -> ()) {
+            onCompletion(BalanceModel(balance: 2000))
+            return
+    }
+
+}

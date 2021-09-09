@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkHandler{
+class ProdNetworkHandler : NetworkHandler {
     
     func getBalance(onCompletion: @escaping (BalanceModel) -> ()) {
         

@@ -31,10 +31,11 @@
 		0390EA2626E134960098D363 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA2526E134960098D363 /* HomeModel.swift */; };
 		0390EACD26E5DB9A0098D363 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EACC26E5DB9A0098D363 /* TransactionViewController.swift */; };
 		0390EAD626E5DBE10098D363 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0390EAD526E5DBE10098D363 /* Accounts.storyboard */; };
-		03DEF02226E8A55B00E0C214 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF02126E8A55B00E0C214 /* NetworkHandler.swift */; };
+		03DEF02226E8A55B00E0C214 /* ProdNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF02126E8A55B00E0C214 /* ProdNetworkHandler.swift */; };
 		03DEF03126E8B71700E0C214 /* TestNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */; };
 		03DEF03526E8D29700E0C214 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF03426E8D29700E0C214 /* ApiConstants.swift */; };
-		03DEF04E26E8EB4500E0C214 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF04D26E8EB4500E0C214 /* NetworkProtocol.swift */; };
+		03DEF04E26E8EB4500E0C214 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF04D26E8EB4500E0C214 /* NetworkHandler.swift */; };
+		03DEF08326E9CB1300E0C214 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF08226E9CB1300E0C214 /* SwinjectStoryboard.swift */; };
 		604FEB21B2AB95F0DD097AAC /* Pods_TestApp_TestAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63537FE74DEE76DFF1BB683 /* Pods_TestApp_TestAppUITests.framework */; };
 		71D2756EB38E802157E67D31 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D2C2B6669D60B6EA1528B4E /* Pods_TestApp.framework */; };
 		976055E1ACC3B4F27C9FA437 /* Pods_TestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47422BA8FEC5348C8F165B10 /* Pods_TestAppTests.framework */; };
@@ -102,10 +103,11 @@
 		0390EA2526E134960098D363 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0390EACC26E5DB9A0098D363 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		0390EAD526E5DBE10098D363 /* Accounts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
-		03DEF02126E8A55B00E0C214 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		03DEF02126E8A55B00E0C214 /* ProdNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdNetworkHandler.swift; sourceTree = "<group>"; };
 		03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkHandler.swift; sourceTree = "<group>"; };
 		03DEF03426E8D29700E0C214 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
-		03DEF04D26E8EB4500E0C214 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		03DEF04D26E8EB4500E0C214 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		03DEF08226E9CB1300E0C214 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		47422BA8FEC5348C8F165B10 /* Pods_TestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF1439D5603C9FE66CCD05E /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		702B511477F52EAF0D270E51 /* Pods-TestApp-TestAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp-TestAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TestApp-TestAppUITests/Pods-TestApp-TestAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,7 +175,7 @@
 				0390E9D726E11F000098D363 /* Uitils */,
 				0390EAD426E5DBC50098D363 /* SupportFiles */,
 				0390E9A726E11E4A0098D363 /* Info.plist */,
-				03DEF02126E8A55B00E0C214 /* NetworkHandler.swift */,
+				03DEF02126E8A55B00E0C214 /* ProdNetworkHandler.swift */,
 				03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */,
 			);
 			path = TestApp;
@@ -258,7 +260,7 @@
 				0390EAD526E5DBE10098D363 /* Accounts.storyboard */,
 				0390E9D526E11ED80098D363 /* Home */,
 				0390E9D626E11EE50098D363 /* Transaction */,
-				03DEF04D26E8EB4500E0C214 /* NetworkProtocol.swift */,
+				03DEF04D26E8EB4500E0C214 /* NetworkHandler.swift */,
 			);
 			path = Accounts;
 			sourceTree = "<group>";
@@ -270,6 +272,7 @@
 				0390E9A226E11E4A0098D363 /* Assets.xcassets */,
 				0390E99B26E11E470098D363 /* SceneDelegate.swift */,
 				0390E99926E11E470098D363 /* AppDelegate.swift */,
+				03DEF08226E9CB1300E0C214 /* SwinjectStoryboard.swift */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -309,7 +312,7 @@
 				0390E99326E11E470098D363 /* Frameworks */,
 				0390E99426E11E470098D363 /* Resources */,
 				03DEF02D26E8B6F600E0C214 /* Embed Frameworks */,
-				087D24861531135965D5F6FE /* [CP] Embed Pods Frameworks */,
+				1A1237B422DF5A440BF60215 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,7 +350,7 @@
 				0390E9B326E11E4A0098D363 /* Sources */,
 				0390E9B426E11E4A0098D363 /* Frameworks */,
 				0390E9B526E11E4A0098D363 /* Resources */,
-				9E1E3B945993F9444108A81E /* [CP] Embed Pods Frameworks */,
+				2DB9D498869F59DCC58E30DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -429,7 +432,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		087D24861531135965D5F6FE /* [CP] Embed Pods Frameworks */ = {
+		1A1237B422DF5A440BF60215 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -444,6 +447,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestApp/Pods-TestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DB9D498869F59DCC58E30DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestApp-TestAppUITests/Pods-TestApp-TestAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestApp-TestAppUITests/Pods-TestApp-TestAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestApp-TestAppUITests/Pods-TestApp-TestAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		45BAE76A8E1CAF310FC3DD60 /* [CP] Check Pods Manifest.lock */ = {
@@ -490,23 +510,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9E1E3B945993F9444108A81E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestApp-TestAppUITests/Pods-TestApp-TestAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestApp-TestAppUITests/Pods-TestApp-TestAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestApp-TestAppUITests/Pods-TestApp-TestAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D2659551650750E9CDB9C198 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -540,13 +543,14 @@
 				0390E9EA26E11F000098D363 /* UILabel+Ext.swift in Sources */,
 				0390E99E26E11E470098D363 /* HomeViewController.swift in Sources */,
 				0390EA2626E134960098D363 /* HomeModel.swift in Sources */,
-				03DEF02226E8A55B00E0C214 /* NetworkHandler.swift in Sources */,
+				03DEF02226E8A55B00E0C214 /* ProdNetworkHandler.swift in Sources */,
 				0390EACD26E5DB9A0098D363 /* TransactionViewController.swift in Sources */,
 				0390E9EF26E11F000098D363 /* UIAnchor+Ext.swift in Sources */,
-				03DEF04E26E8EB4500E0C214 /* NetworkProtocol.swift in Sources */,
+				03DEF04E26E8EB4500E0C214 /* NetworkHandler.swift in Sources */,
 				0390EA1926E127DA0098D363 /* UITextField+Ext.swift in Sources */,
 				0390E9E726E11F000098D363 /* HorizontalStackView.swift in Sources */,
 				0390E9EB26E11F000098D363 /* UIImageView+Ext.swift in Sources */,
+				03DEF08326E9CB1300E0C214 /* SwinjectStoryboard.swift in Sources */,
 				0390EA1426E126AA0098D363 /* BaseViewController.swift in Sources */,
 				0390EA0F26E125B20098D363 /* TransactionView.swift in Sources */,
 				0390E9E926E11F000098D363 /* VerticalStackView.swift in Sources */,

@@ -6,42 +6,17 @@
 //
 
 import UIKit
-//import Swinject
-//import SwinjectStoryboard
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window : UIWindow?
-//    var container = Container()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        self.registerDependencies()
-//        self.injectDependencies()
-////        window?.rootViewController = UINavigationController(rootViewController: HomeVC())
-//        let window = UIWindow(frame: UIScreen.main.bounds)
-//        window.makeKeyAndVisible()
-//        self.window = window
-//        let swinjectStoryboard = SwinjectStoryboard.create(name: "Accounts", bundle: nil, container: self.container)
-//        window.rootViewController = swinjectStoryboard.instantiateInitialViewController()
-//        Container.loggingFunction = nil
+        
         return true
     }
     
-//    private func registerDependencies() {
-//        self.container.register(NetworkProtocol.self, factory: { resolver in
-//            return NetworkHandler()
-//        })
-//    }
-    
-//    private func injectDependencies() {
-//        self.container.storyboardInitCompleted(HomeViewController.self) { (resolver, viewController) in
-//            viewController.networkProtocol = resolver.resolve(NetworkProtocol.self)
-//        }
-//    }
-    
-    
-
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
