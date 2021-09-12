@@ -36,9 +36,19 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PRu-RS-q0b" userLabel="transactionTableView">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PRu-RS-q0b" userLabel="transactionTableView" customClass="Z">
                                         <rect key="frame" x="0.0" y="97" width="370" height="657"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UuT-s4-ysE" customClass="TransactionTableViewCell">
+                                                <rect key="frame" x="0.0" y="28" width="370" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UuT-s4-ysE" id="nbE-Ut-hGV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
                                     </tableView>
                                 </subviews>
                             </stackView>
@@ -61,6 +71,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="balanceAmount" destination="fPu-1y-IOM" id="l8g-G5-FZx"/>
+                        <outlet property="transactionTableView" destination="PRu-RS-q0b" id="Whb-nE-Sjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,21 +87,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="SJs-xb-de1" userLabel="contentStackView">
-                                <rect key="frame" x="22" y="148" width="370" height="258.5"/>
+                                <rect key="frame" x="22" y="148" width="370" height="366"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-11-Lhv" userLabel="amountLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="38.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x23-tL-XJ4" userLabel="amountTextField">
-                                        <rect key="frame" x="0.0" y="98.5" width="370" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gbB-F8-5M7" userLabel="amountStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="97"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-11-Lhv" userLabel="amountLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x23-tL-XJ4" userLabel="amountTextField">
+                                                <rect key="frame" x="0.0" y="49" width="370" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0OZ-hi-OlE" userLabel="remarksStackView">
+                                        <rect key="frame" x="0.0" y="157" width="370" height="97"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Remarks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBW-cQ-IM9" userLabel="remarksLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Remarks" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DuL-wR-Hsg" userLabel="remarksTextField">
+                                                <rect key="frame" x="0.0" y="49" width="370" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-Uu-L1h" userLabel="buttonStackView">
-                                        <rect key="frame" x="0.0" y="206.5" width="370" height="52"/>
+                                        <rect key="frame" x="0.0" y="314" width="370" height="52"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y15-3Q-ch3" userLabel="creditButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="52"/>
@@ -101,6 +133,9 @@
                                                 <state key="normal" title="Credit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onCreditButtonClicked:" destination="7ft-sZ-o1L" eventType="touchUpInside" id="j4v-bb-OAG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gS-Yb-YGd" userLabel="debitButton">
                                                 <rect key="frame" x="205" y="0.0" width="165" height="52"/>
@@ -111,6 +146,9 @@
                                                 <state key="normal" title="Debit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onDebitButtonClicked:" destination="7ft-sZ-o1L" eventType="touchUpInside" id="kcO-ix-ea1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -125,6 +163,10 @@
                             <constraint firstItem="SJs-xb-de1" firstAttribute="top" secondItem="pCp-Ng-ItP" secondAttribute="top" constant="104" id="SZJ-T6-SwO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="x23-tL-XJ4" id="DHY-IW-CCp"/>
+                        <outlet property="remarksTextField" destination="DuL-wR-Hsg" id="JQd-2p-z7D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ste-la-I0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

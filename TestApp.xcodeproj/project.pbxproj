@@ -21,21 +21,20 @@
 		0390E9EC26E11F000098D363 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390E9E126E11F000098D363 /* AppColor.swift */; };
 		0390E9ED26E11F000098D363 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390E9E226E11F000098D363 /* UIButton+Ext.swift */; };
 		0390E9EF26E11F000098D363 /* UIAnchor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390E9E426E11F000098D363 /* UIAnchor+Ext.swift */; };
-		0390EA0026E125890098D363 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390E9FF26E125890098D363 /* HomeVC.swift */; };
-		0390EA0526E1259C0098D363 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA0426E1259C0098D363 /* HomeView.swift */; };
-		0390EA0A26E125A70098D363 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA0926E125A70098D363 /* TransactionVC.swift */; };
-		0390EA0F26E125B20098D363 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA0E26E125B20098D363 /* TransactionView.swift */; };
 		0390EA1426E126AA0098D363 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA1326E126AA0098D363 /* BaseViewController.swift */; };
 		0390EA1926E127DA0098D363 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA1826E127DA0098D363 /* UITextField+Ext.swift */; };
-		0390EA1E26E12FCD0098D363 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA1D26E12FCD0098D363 /* HomeCell.swift */; };
-		0390EA2626E134960098D363 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA2526E134960098D363 /* HomeModel.swift */; };
+		0390EA2626E134960098D363 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EA2526E134960098D363 /* BalanceModel.swift */; };
 		0390EACD26E5DB9A0098D363 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390EACC26E5DB9A0098D363 /* TransactionViewController.swift */; };
 		0390EAD626E5DBE10098D363 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0390EAD526E5DBE10098D363 /* Accounts.storyboard */; };
+		03990B4C26EE5F6700D05A2A /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03990B4B26EE5F6700D05A2A /* TransactionTableViewCell.xib */; };
+		03990B5226EE611C00D05A2A /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03990B5126EE611C00D05A2A /* TransactionTableViewCell.swift */; };
 		03DEF02226E8A55B00E0C214 /* ProdNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF02126E8A55B00E0C214 /* ProdNetworkHandler.swift */; };
 		03DEF03126E8B71700E0C214 /* TestNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */; };
 		03DEF03526E8D29700E0C214 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF03426E8D29700E0C214 /* ApiConstants.swift */; };
 		03DEF04E26E8EB4500E0C214 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF04D26E8EB4500E0C214 /* NetworkHandler.swift */; };
 		03DEF08326E9CB1300E0C214 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF08226E9CB1300E0C214 /* SwinjectStoryboard.swift */; };
+		03DEF08F26E9FDBC00E0C214 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF08E26E9FDBC00E0C214 /* TransactionModel.swift */; };
+		03DEF09C26EA0EE100E0C214 /* CreditDebitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF09B26EA0EE100E0C214 /* CreditDebitModel.swift */; };
 		604FEB21B2AB95F0DD097AAC /* Pods_TestApp_TestAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63537FE74DEE76DFF1BB683 /* Pods_TestApp_TestAppUITests.framework */; };
 		71D2756EB38E802157E67D31 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D2C2B6669D60B6EA1528B4E /* Pods_TestApp.framework */; };
 		976055E1ACC3B4F27C9FA437 /* Pods_TestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47422BA8FEC5348C8F165B10 /* Pods_TestAppTests.framework */; };
@@ -93,21 +92,20 @@
 		0390E9E126E11F000098D363 /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		0390E9E226E11F000098D363 /* UIButton+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		0390E9E426E11F000098D363 /* UIAnchor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAnchor+Ext.swift"; sourceTree = "<group>"; };
-		0390E9FF26E125890098D363 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		0390EA0426E1259C0098D363 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		0390EA0926E125A70098D363 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
-		0390EA0E26E125B20098D363 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		0390EA1326E126AA0098D363 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0390EA1826E127DA0098D363 /* UITextField+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
-		0390EA1D26E12FCD0098D363 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
-		0390EA2526E134960098D363 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		0390EA2526E134960098D363 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		0390EACC26E5DB9A0098D363 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		0390EAD526E5DBE10098D363 /* Accounts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
+		03990B4B26EE5F6700D05A2A /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		03990B5126EE611C00D05A2A /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		03DEF02126E8A55B00E0C214 /* ProdNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdNetworkHandler.swift; sourceTree = "<group>"; };
 		03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkHandler.swift; sourceTree = "<group>"; };
 		03DEF03426E8D29700E0C214 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		03DEF04D26E8EB4500E0C214 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		03DEF08226E9CB1300E0C214 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
+		03DEF08E26E9FDBC00E0C214 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		03DEF09B26EA0EE100E0C214 /* CreditDebitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDebitModel.swift; sourceTree = "<group>"; };
 		47422BA8FEC5348C8F165B10 /* Pods_TestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF1439D5603C9FE66CCD05E /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		702B511477F52EAF0D270E51 /* Pods-TestApp-TestAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp-TestAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TestApp-TestAppUITests/Pods-TestApp-TestAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,8 +173,6 @@
 				0390E9D726E11F000098D363 /* Uitils */,
 				0390EAD426E5DBC50098D363 /* SupportFiles */,
 				0390E9A726E11E4A0098D363 /* Info.plist */,
-				03DEF02126E8A55B00E0C214 /* ProdNetworkHandler.swift */,
-				03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -202,11 +198,10 @@
 		0390E9D526E11ED80098D363 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				03DEF09526EA042F00E0C214 /* HomeModel */,
 				0390E99D26E11E470098D363 /* HomeViewController.swift */,
-				0390E9FF26E125890098D363 /* HomeVC.swift */,
-				0390EA0426E1259C0098D363 /* HomeView.swift */,
-				0390EA1D26E12FCD0098D363 /* HomeCell.swift */,
-				0390EA2526E134960098D363 /* HomeModel.swift */,
+				03990B4B26EE5F6700D05A2A /* TransactionTableViewCell.xib */,
+				03990B5126EE611C00D05A2A /* TransactionTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -215,8 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				0390EACC26E5DB9A0098D363 /* TransactionViewController.swift */,
-				0390EA0926E125A70098D363 /* TransactionVC.swift */,
-				0390EA0E26E125B20098D363 /* TransactionView.swift */,
+				03DEF09B26EA0EE100E0C214 /* CreditDebitModel.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -258,9 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				0390EAD526E5DBE10098D363 /* Accounts.storyboard */,
+				03DEF09426EA039800E0C214 /* NetworkHandler */,
 				0390E9D526E11ED80098D363 /* Home */,
 				0390E9D626E11EE50098D363 /* Transaction */,
-				03DEF04D26E8EB4500E0C214 /* NetworkHandler.swift */,
 			);
 			path = Accounts;
 			sourceTree = "<group>";
@@ -275,6 +269,25 @@
 				03DEF08226E9CB1300E0C214 /* SwinjectStoryboard.swift */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		03DEF09426EA039800E0C214 /* NetworkHandler */ = {
+			isa = PBXGroup;
+			children = (
+				03DEF04D26E8EB4500E0C214 /* NetworkHandler.swift */,
+				03DEF02126E8A55B00E0C214 /* ProdNetworkHandler.swift */,
+				03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */,
+			);
+			path = NetworkHandler;
+			sourceTree = "<group>";
+		};
+		03DEF09526EA042F00E0C214 /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				03DEF08E26E9FDBC00E0C214 /* TransactionModel.swift */,
+				0390EA2526E134960098D363 /* BalanceModel.swift */,
+			);
+			path = HomeModel;
 			sourceTree = "<group>";
 		};
 		F154DF0DB32E41CA1CF3749E /* Pods */ = {
@@ -411,6 +424,7 @@
 			files = (
 				0390EAD626E5DBE10098D363 /* Accounts.storyboard in Resources */,
 				0390E9A626E11E4A0098D363 /* LaunchScreen.storyboard in Resources */,
+				03990B4C26EE5F6700D05A2A /* TransactionTableViewCell.xib in Resources */,
 				0390E9A326E11E4A0098D363 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,29 +553,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DEF08F26E9FDBC00E0C214 /* TransactionModel.swift in Sources */,
 				03DEF03526E8D29700E0C214 /* ApiConstants.swift in Sources */,
 				0390E9EA26E11F000098D363 /* UILabel+Ext.swift in Sources */,
 				0390E99E26E11E470098D363 /* HomeViewController.swift in Sources */,
-				0390EA2626E134960098D363 /* HomeModel.swift in Sources */,
+				0390EA2626E134960098D363 /* BalanceModel.swift in Sources */,
 				03DEF02226E8A55B00E0C214 /* ProdNetworkHandler.swift in Sources */,
 				0390EACD26E5DB9A0098D363 /* TransactionViewController.swift in Sources */,
 				0390E9EF26E11F000098D363 /* UIAnchor+Ext.swift in Sources */,
+				03DEF09C26EA0EE100E0C214 /* CreditDebitModel.swift in Sources */,
 				03DEF04E26E8EB4500E0C214 /* NetworkHandler.swift in Sources */,
 				0390EA1926E127DA0098D363 /* UITextField+Ext.swift in Sources */,
 				0390E9E726E11F000098D363 /* HorizontalStackView.swift in Sources */,
+				03990B5226EE611C00D05A2A /* TransactionTableViewCell.swift in Sources */,
 				0390E9EB26E11F000098D363 /* UIImageView+Ext.swift in Sources */,
 				03DEF08326E9CB1300E0C214 /* SwinjectStoryboard.swift in Sources */,
 				0390EA1426E126AA0098D363 /* BaseViewController.swift in Sources */,
-				0390EA0F26E125B20098D363 /* TransactionView.swift in Sources */,
 				0390E9E926E11F000098D363 /* VerticalStackView.swift in Sources */,
-				0390EA1E26E12FCD0098D363 /* HomeCell.swift in Sources */,
 				0390E99A26E11E470098D363 /* AppDelegate.swift in Sources */,
 				0390E9EC26E11F000098D363 /* AppColor.swift in Sources */,
 				0390E99C26E11E470098D363 /* SceneDelegate.swift in Sources */,
-				0390EA0A26E125A70098D363 /* TransactionVC.swift in Sources */,
-				0390EA0526E1259C0098D363 /* HomeView.swift in Sources */,
 				03DEF03126E8B71700E0C214 /* TestNetworkHandler.swift in Sources */,
-				0390EA0026E125890098D363 /* HomeVC.swift in Sources */,
 				0390E9ED26E11F000098D363 /* UIButton+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
