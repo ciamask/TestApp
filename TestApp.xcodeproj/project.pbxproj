@@ -28,7 +28,10 @@
 		0390EAD626E5DBE10098D363 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0390EAD526E5DBE10098D363 /* Accounts.storyboard */; };
 		03990B4C26EE5F6700D05A2A /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03990B4B26EE5F6700D05A2A /* TransactionTableViewCell.xib */; };
 		03990B5226EE611C00D05A2A /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03990B5126EE611C00D05A2A /* TransactionTableViewCell.swift */; };
-		03DEF02226E8A55B00E0C214 /* ProdNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF02126E8A55B00E0C214 /* ProdNetworkHandler.swift */; };
+		03DC8CA327006C850099356F /* ProdNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC8CA227006C850099356F /* ProdNetworkHandler.swift */; };
+		03DC8CA827006D420099356F /* URL+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC8CA727006D420099356F /* URL+ext.swift */; };
+		03DC8CAC2700728A0099356F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC8CAB2700728A0099356F /* HomeViewModel.swift */; };
+		03DEF02226E8A55B00E0C214 /* URLSessionNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF02126E8A55B00E0C214 /* URLSessionNetworkHandler.swift */; };
 		03DEF03126E8B71700E0C214 /* TestNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */; };
 		03DEF03526E8D29700E0C214 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF03426E8D29700E0C214 /* ApiConstants.swift */; };
 		03DEF04E26E8EB4500E0C214 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEF04D26E8EB4500E0C214 /* NetworkHandler.swift */; };
@@ -99,7 +102,10 @@
 		0390EAD526E5DBE10098D363 /* Accounts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
 		03990B4B26EE5F6700D05A2A /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		03990B5126EE611C00D05A2A /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
-		03DEF02126E8A55B00E0C214 /* ProdNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdNetworkHandler.swift; sourceTree = "<group>"; };
+		03DC8CA227006C850099356F /* ProdNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdNetworkHandler.swift; sourceTree = "<group>"; };
+		03DC8CA727006D420099356F /* URL+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ext.swift"; sourceTree = "<group>"; };
+		03DC8CAB2700728A0099356F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		03DEF02126E8A55B00E0C214 /* URLSessionNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkHandler.swift; sourceTree = "<group>"; };
 		03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkHandler.swift; sourceTree = "<group>"; };
 		03DEF03426E8D29700E0C214 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		03DEF04D26E8EB4500E0C214 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
@@ -202,6 +208,7 @@
 				0390E99D26E11E470098D363 /* HomeViewController.swift */,
 				03990B4B26EE5F6700D05A2A /* TransactionTableViewCell.xib */,
 				03990B5126EE611C00D05A2A /* TransactionTableViewCell.swift */,
+				03DC8CAB2700728A0099356F /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -218,6 +225,7 @@
 		0390E9D726E11F000098D363 /* Uitils */ = {
 			isa = PBXGroup;
 			children = (
+				03DC8CA627006CC30099356F /* NetworkExtensions */,
 				0390E9D826E11F000098D363 /* CustomClasses */,
 				0390E9DE26E11F000098D363 /* Extensions */,
 			);
@@ -271,12 +279,21 @@
 			path = SupportFiles;
 			sourceTree = "<group>";
 		};
+		03DC8CA627006CC30099356F /* NetworkExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				03DC8CA727006D420099356F /* URL+ext.swift */,
+			);
+			path = NetworkExtensions;
+			sourceTree = "<group>";
+		};
 		03DEF09426EA039800E0C214 /* NetworkHandler */ = {
 			isa = PBXGroup;
 			children = (
 				03DEF04D26E8EB4500E0C214 /* NetworkHandler.swift */,
-				03DEF02126E8A55B00E0C214 /* ProdNetworkHandler.swift */,
+				03DEF02126E8A55B00E0C214 /* URLSessionNetworkHandler.swift */,
 				03DEF03026E8B71700E0C214 /* TestNetworkHandler.swift */,
+				03DC8CA227006C850099356F /* ProdNetworkHandler.swift */,
 			);
 			path = NetworkHandler;
 			sourceTree = "<group>";
@@ -556,9 +573,12 @@
 				03DEF08F26E9FDBC00E0C214 /* TransactionModel.swift in Sources */,
 				03DEF03526E8D29700E0C214 /* ApiConstants.swift in Sources */,
 				0390E9EA26E11F000098D363 /* UILabel+Ext.swift in Sources */,
+				03DC8CAC2700728A0099356F /* HomeViewModel.swift in Sources */,
 				0390E99E26E11E470098D363 /* HomeViewController.swift in Sources */,
 				0390EA2626E134960098D363 /* BalanceModel.swift in Sources */,
-				03DEF02226E8A55B00E0C214 /* ProdNetworkHandler.swift in Sources */,
+				03DEF02226E8A55B00E0C214 /* URLSessionNetworkHandler.swift in Sources */,
+				03DC8CA327006C850099356F /* ProdNetworkHandler.swift in Sources */,
+				03DC8CA827006D420099356F /* URL+ext.swift in Sources */,
 				0390EACD26E5DB9A0098D363 /* TransactionViewController.swift in Sources */,
 				0390E9EF26E11F000098D363 /* UIAnchor+Ext.swift in Sources */,
 				03DEF09C26EA0EE100E0C214 /* CreditDebitModel.swift in Sources */,

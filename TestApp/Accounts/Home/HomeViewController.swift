@@ -9,18 +9,21 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var networkHandler: NetworkHandler!
-    
     @IBOutlet weak var balanceAmount: UILabel!
     @IBOutlet weak var transactionTableView: UITableView!
     var transactionData = [Transaction]()
+    var homeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        callApi()
         setupTableView()
+        observeViewModelEvents()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        homeViewModel.callgetBalanceApi()
+//        callApi()
+    }
     
     @IBAction func addButtonClicked(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Accounts", bundle:nil)
@@ -28,24 +31,34 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(transactionViewController, animated: true)
     }
     
-    private func callApi() {
-        networkHandler.getBalance { [weak self] (model) in
+//    private func callApi() {
+//        networkHandler.getBalance { [weak self] (model) in
+//            guard let self = self else {return}
+//            let balance = model.balance ?? 0
+//            self.configureView(with: balance)
+//        }
+//        networkHandler.getTransactionData { [weak self] (model) in
+//            guard let self = self else {return}
+//            guard let data = model.transactions else {return}
+//            self.transactionData = data
+//            DispatchQueue.main.async { [weak self] in
+//                self?.transactionTableView.reloadData()
+//            }
+//        }
+//    }
+    
+    private func observeViewModelEvents() {
+        homeViewModel.onGetBalanceCalled = { [weak self] (balance) in
             guard let self = self else {return}
-            let balance = model.balance ?? 0
             self.configureView(with: balance)
-        }
-        networkHandler.getTransactionData { [weak self] (model) in
-            guard let self = self else {return}
-            guard let data = model.transactions else {return}
-            self.transactionData = data
-            DispatchQueue.main.async { [weak self] in
-                self?.transactionTableView.reloadData()
-            }
         }
     }
     
     private func configureView(with balance: Int) {
-        balanceAmount.text = String(balance)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {return}
+            self.balanceAmount.text = "$ " + String(balance)
+        }
     }
     
     @IBOutlet weak var transactiontableViewCell: UITableViewCell!

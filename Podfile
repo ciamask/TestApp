@@ -8,6 +8,9 @@ target 'TestApp' do
   # Pods for TestApp
   pod 'Swinject', '2.7.1'
   pod 'SwinjectStoryboard'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
+  
 
   target 'TestAppTests' do
     inherit! :search_paths

@@ -34,9 +34,11 @@ class TransactionTableViewCell: UITableViewCell {
             remarksLabel.textColor = .systemRed
             transactionAmount.textColor = .systemRed
         }
-        transactionTypeLabel.text = data.type
+        transactionTypeLabel.text = data.type?.uppercased()
         remarksLabel.text = data.title
-        transactionAmount.text = String(data.transactionAmount ?? 0)
+        transactionAmount.text = "$ " + String(data.transactionAmount ?? 0)
     }
+    
+    
     
 }

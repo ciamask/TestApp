@@ -7,7 +7,15 @@
 
 import Foundation
 
-class TestNetworkHandler {    
+class TestNetworkHandler : NetworkHandler {
+    func postCreditBalance(amount: Int, remarks: String, onCompletion: @escaping (String) -> ()) {
+        onCompletion("Success")
+    }
+    
+    func postDebitBalance(amount: Int, remarks: String, onCompletion: @escaping (String) -> ()) {
+        onCompletion("Success")
+    }
+    
     
     func getBalance(onCompletion: @escaping (BalanceModel) -> ()) {
             onCompletion(BalanceModel(balance: 2000))
@@ -15,7 +23,7 @@ class TestNetworkHandler {
     }
     
     func getTransactionData(onCompletion: @escaping (TransactionsModel) -> ()) {
-        onCompletion(TransactionsModel(transactions: [Transaction.init(amount: 100, transactionAmount: 10, type: "Credit", title: "HI", time: "hi", id: "1jbwdiyg123")]))
+        onCompletion(TransactionsModel(transactions: [Transaction.init(amount: 100, transactionAmount: 10, type: "Credit", title: "HI", time: "2021-01-01", id: "1jbwdiyg123")]))
     }
     
 }

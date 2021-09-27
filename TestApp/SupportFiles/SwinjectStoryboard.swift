@@ -21,7 +21,7 @@ extension SwinjectStoryboard {
         
         //Assiging Required Dependency into ViewController
         swinject.storyboardInitCompleted(HomeViewController.self) { (resolvable, viewController) in
-            viewController.networkHandler = resolvable.resolve(NetworkHandler.self, name: "NetworkHandler")
+            viewController.homeViewModel.networkHandler = resolvable.resolve(NetworkHandler.self, name: "NetworkHandler")
         }
         
         swinject.storyboardInitCompleted(TransactionViewController.self) { (resolvable, viewController) in

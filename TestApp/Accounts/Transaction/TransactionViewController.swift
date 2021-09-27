@@ -19,31 +19,37 @@ class TransactionViewController: UIViewController {
     }
     
     @IBAction func onCreditButtonClicked(_ sender: Any) {
-        let amount = Int(amountTextField.text ?? "") ?? 0
+        let amount = amountTextField.text ?? ""
         let remark = remarksTextField.text ?? ""
-        networkHandler.postCreditBalance(amount: amount, remarks: remark) { [weak self] (model) in
-            guard let self = self else {return}
-            print(model)
-            DispatchQueue.main.async { [weak self] in
-                self?.showAlert()
+        if remark.isEmpty && amount.isEmpty {
+            self.showAlert(with: "Enter All Data")
+        } else {
+            networkHandler.postCreditBalance(amount: Int(amount) ?? 0, remarks: remark) { [weak self] model in
+                guard let self = self else {return}
+                DispatchQueue.main.async { [weak self]  in
+                    self?.showAlert(with: model)
+                }
             }
         }
     }
     
     @IBAction func onDebitButtonClicked(_ sender: Any) {
-        let amount = Int(amountTextField.text ?? "") ?? 0
+        let amount = amountTextField.text ?? ""
         let remark = remarksTextField.text ?? ""
-        networkHandler.postDebitBalance(amount: amount, remarks: remark) { [weak self] (model) in
-            guard let self = self else {return}
-            print(model)
-            DispatchQueue.main.async { [weak self] in
-                self?.showAlert()
+        if remark.isEmpty && amount.isEmpty {
+            self.showAlert(with: "Enter All Data")
+        } else {
+            networkHandler.postCreditBalance(amount: Int(amount) ?? 0, remarks: remark) { [weak self] model in
+                guard let self = self else {return}
+                DispatchQueue.main.async { [weak self] in
+                    self?.showAlert(with: model)
+                }
             }
         }
     }
     
-    private func showAlert(){
-        let alert = UIAlertController(title: "Test App", message: "Success", preferredStyle: .alert)
+    private func showAlert(with msg: String){
+        let alert = UIAlertController(title: "Test App", message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
         present(alert, animated: true)
     }

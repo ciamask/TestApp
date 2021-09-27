@@ -20,3 +20,4 @@ struct Transaction: Codable {
         case id = "_id"
     }
 }
+
