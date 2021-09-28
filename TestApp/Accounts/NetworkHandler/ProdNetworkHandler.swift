@@ -11,14 +11,18 @@ import RxCocoa
 
 class ProdNetworkHandler : NetworkHandler {
     
-    let disposeBag = DisposeBag()
-    
-    func getBalance(onCompletion: @escaping (BalanceModel) -> ()) {
+    func getBalance() -> Driver<BalanceModel> {
         let resource = Resource<BalanceModel>(url: URL(string:ApiConstants.baseUrl + ApiConstants.getBalance)!)
-        URLRequest.load(resource: resource)
-            .subscribe(onNext: { balanceResponse in
-                onCompletion(balanceResponse ?? BalanceModel.empty)
-            }).disposed(by: disposeBag)
+        let model = URLRequest.load(resource: resource)
+            .observe(on: MainScheduler.instance)
+            .retry(3) // retrying on error
+            .catch { error in  // handeling error
+                print(error.localizedDescription)
+                return Observable.just(BalanceModel.empty)
+            }.asDriver(onErrorJustReturn: BalanceModel.empty)
+
+        return model
+        
     }
     
     func postCreditBalance(amount: Int, remarks: String, onCompletion: @escaping (String) -> ()) {

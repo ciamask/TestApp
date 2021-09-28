@@ -6,19 +6,17 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
-class HomeViewModel {
+class HomeViewModel  {
     
     var networkHandler: NetworkHandler!
-    var onGetBalanceCalled : ((Int) -> Void)?
+    var bal = 0
     
-    func callgetBalanceApi() {
-        networkHandler.getBalance { [weak self] model in
-            guard let self = self else {return}
-            let balance = model.balance ?? 0
-            print(balance)
-            self.onGetBalanceCalled?(balance)
-        }
+    func callgetBalanceApi() -> Observable<BalanceModel> {
+        let resource = Resource<BalanceModel>(url: URL(string:ApiConstants.baseUrl + ApiConstants.getBalance)!)
+        let model = URLRequest.load(resource: resource)
+        return model
     }
-    
 }

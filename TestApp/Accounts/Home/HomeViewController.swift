@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController {
+    
+    let disposeBag = DisposeBag()
     
     @IBOutlet weak var balanceAmount: UILabel!
     @IBOutlet weak var transactionTableView: UITableView!
@@ -17,12 +21,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        observeViewModelEvents()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        homeViewModel.callgetBalanceApi()
-//        callApi()
+        configureView()
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {
@@ -47,18 +49,18 @@ class HomeViewController: UIViewController {
 //        }
 //    }
     
-    private func observeViewModelEvents() {
-        homeViewModel.onGetBalanceCalled = { [weak self] (balance) in
-            guard let self = self else {return}
-            self.configureView(with: balance)
-        }
-    }
-    
-    private func configureView(with balance: Int) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else {return}
-            self.balanceAmount.text = "$ " + String(balance)
-        }
+    private func configureView() {
+        let balance = homeViewModel.callgetBalanceApi()
+            .observe(on: MainScheduler.instance)
+            .retry(3)
+            .catch { error in
+                print(error.localizedDescription)
+                return Observable.just(BalanceModel.empty)
+            }.asDriver(onErrorJustReturn: BalanceModel.empty)
+        
+        balance.map { "$ \($0.balance ?? 0)" }
+            .drive(self.balanceAmount.rx.text)
+            .disposed(by: disposeBag)
     }
     
     @IBOutlet weak var transactiontableViewCell: UITableViewCell!
